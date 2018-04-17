@@ -21,7 +21,7 @@ public class TreeNode {
             TreeNode node = queue.poll();
             if (node != null) {
                 node.left = ("null".equals(nums[i++])) ? null : new TreeNode(Integer.parseInt(nums[i - 1]));
-                node.right = ("null".equals(nums[i++])) ? null : new TreeNode(Integer.parseInt(nums[i - 1]));
+                node.right = (i < nums.length && "null".equals(nums[i++])) ? null : new TreeNode(Integer.parseInt(nums[i - 1]));
                 queue.offer(node.left);
                 queue.offer(node.right);
             }
