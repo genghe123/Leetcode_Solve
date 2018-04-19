@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/longest-common-prefix/description/"
-public class LongestCommonPrefix_14 {
+public class LongestCommonPrefix {
     public static void main(String[] args) {
-        LongestCommonPrefix_14 longestCommonPrefix = new LongestCommonPrefix_14();
+        LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
         longestCommonPrefix.longestCommonPrefix(new String[]{""});
     }
 

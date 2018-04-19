@@ -2,9 +2,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class LongestCommonPrefix_14Test {
+public class LongestCommonPrefixTest {
 
-    private LongestCommonPrefix_14 longestCommonPrefix = new LongestCommonPrefix_14();
+    private LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
 
     @Test
     public void longestCommonPrefix() {
