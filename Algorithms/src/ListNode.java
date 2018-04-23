@@ -43,4 +43,11 @@ public class ListNode {
         }
         return stringBuilder.toString();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof ListNode)) return false;
+        ListNode other = (ListNode) obj;
+        return this.toString() == other.toString();
+    }
 }
