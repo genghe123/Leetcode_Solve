@@ -1,6 +1,7 @@
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class ValidPalindromeTest {
 
@@ -8,7 +9,7 @@ public class ValidPalindromeTest {
 
     @Test
     public void isPalindrome() {
-        assertTrue(validPalindrome.isPalindrome("A man, a plan, a canal: Panama"));
+        assertTrue(validPalindrome.isPalindrome("A Solution, a plan, a canal: Panama"));
         assertTrue(validPalindrome.isPalindrome(""));
         assertTrue(validPalindrome.isPalindrome(",."));
         assertTrue(validPalindrome.isPalindrome(",.~"));

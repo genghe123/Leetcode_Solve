@@ -2,6 +2,7 @@
 
 // https://leetcode.com/problems/count-primes/discuss/57593/12-ms-Java-solution-modified-from-the-hint-method-beats-99.95
 
+//todo understand these codes
 public class CountPrimes {
     /**
      * Count the number of prime numbers less than a non-negative number, n
@@ -52,6 +53,38 @@ public class CountPrimes {
          */
         for (int i = 3; i * i < n; i += 2) {
             if (s[i]) continue;  // c has already bean decremented for this composite odd
+
+            /**
+             * For each prime i, iterate through the odd composites
+             * we know we can form from i, and mark them as composite
+             * if not already marked.
+             *
+             * We know that i * i is composite.
+             * We also know that i * i + i is composite, since they share
+             * a common factor of i.
+             * Thus, we also know that i * i + a*i is composite for all real a,
+             * since they share a common factor of i.
+             *
+             * Note, though, that i * i + i _must_ be composite for an
+             * independent reason: it must be even.
+             * (all i are odd, thus all i*i are odd,
+             * thus all (odd + odd) are even).
+             *
+             * Recall that, by initializing c to n/2, we already accounted for
+             * all of the evens less than n being composite, and so marking
+             * i * i + (odd)*i as composite is needless bookkeeping.
+             *
+             * So, we can skip checking i * i + a*i for all odd a,
+             * and just increment j by even multiples of i,
+             * since all (odd + even) are odd.
+             */
+            for (int j = i * i; j < n; j += 2 * i) {
+                if (!s[j]) {
+                    c--;
+                    s[j] = true;
+                }
+            }
         }
+        return c;
     }
 }

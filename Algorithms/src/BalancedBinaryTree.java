@@ -1,7 +1,5 @@
 // https://leetcode.com/problems/balanced-binary-tree/description/
 // Algorithms 4th Edition Ex.3.2.25 Perfect Balance 完美平衡
-
-//todo unhandled exception: [3,1,null,null,2]: chain tree
 public class BalancedBinaryTree {
     /*
     //Definition of Balanced Binary Tree : no 2 leaf nodes differ in distance from the root by more than 1

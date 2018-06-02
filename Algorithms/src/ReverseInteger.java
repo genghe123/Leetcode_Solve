@@ -1,4 +1,4 @@
-public class Reverse_Integer {
+public class ReverseInteger {
     public int reverse(int x) {
         char[] digits = String.valueOf(x).toCharArray();
         int num = 0;

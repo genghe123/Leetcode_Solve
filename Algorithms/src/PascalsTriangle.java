@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-//todo
 public class PascalsTriangle {
     public static void main(String[] args) {
         PascalsTriangle pascalsTriangle = new PascalsTriangle();

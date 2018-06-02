@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class Reverse_IntegerTest {
-    Reverse_Integer reverseInteger = new Reverse_Integer();
+    ReverseInteger reverseInteger = new ReverseInteger();
 
     @Test
     public void reverse() {
