@@ -1,6 +1,5 @@
 package Exercise;
 
-import com.sun.istack.internal.NotNull;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -36,7 +35,7 @@ public class TreeNode<Key extends Comparable<Key>, Value> {
         return root;
     }
 
-    public Iterable<TreeNode> nodes(@NotNull IteratePattern pattern) {
+    public Iterable<TreeNode> nodes(IteratePattern pattern) {
         Queue<TreeNode> queue = new LinkedList<>();
         if (pattern == IteratePattern.In) inIterate(this, queue);
         else if (pattern == IteratePattern.Post) postIterate(this, queue);
